@@ -1,4 +1,313 @@
-.backgroundContainer {
+p {
+    font-size: 3.125vw;
+    margin-bottom: .25em;
+    color: #E3DDA4;
+    font-family: "Cinzel", "Noto Serif TC", "Noto Serif SC", "Noto Serif KR", serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6), 1px -1px 4px rgba(0, 0, 0, 0.6), -1px 1px 4px rgba(0, 0, 0, 0.6), -1px -1px 4px rgba(0, 0, 0, 0.6);
+    width: 100%;
+}
+
+.parentContainer {
+    height: 100%;
+}
+
+.bgMountains {
     width: 100%;
     height: 100%;
+    position: fixed;
+    z-index: -3;
+}
+
+.bgCharacter {
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    position: fixed;
+}
+
+.bgOverlay {
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    position: fixed;
+}
+
+.viewOne {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 0 4vh;
+    margin-bottom: 24vh;
+}
+
+.scrollContainer {
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    width: 16px;
+    cursor: pointer;
+}
+
+.scrollDown {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.scrollDownAnimation {
+    width: 1px;
+    background: #E3DDA4;
+
+    animation:  1s linear 0s infinite slidein;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.topicContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24vh;
+}
+
+.imgContainer {
+    display: flex;
+}
+
+.topic {
+    background-color: #000000;
+    margin: 0 2vh;
+    transition: box-shadow .4s ease-in-out;
+    border: 1px solid rgba(227, 221, 164, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.topic:hover {
+    box-shadow: 0 0 10px 2px rgba(227, 221, 164, 0.6);
+    cursor: pointer;
+}
+
+.topicText {
+    max-width: 370px;
+    font-size: 14px;
+    text-align: left;
+    padding: 1em;
+}
+
+.dateContainer {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 1em;
+}
+
+.flashingDot {
+    background: #E3DDA4;
+    border-radius: 100%;
+    height: 6px;
+    width: 6px;
+    margin: 0 5px;
+}
+
+.flashingDotAnimation {
+    position: absolute;
+    background: #E3DDA4;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    animation: pulsate 1.5s ease-out infinite;
+    margin-right: 4px;
+    z-index: 9999;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0.0;
+      }
+      50% {
+        opacity: 1.0;
+      }
+      100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0.0;
+      }
+}
+
+.trailerContainer {
+    
+}
+
+.aboutContainer {
+    display: flex;
+    margin-bottom: 24vh;
+    justify-content: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 50%;
+}
+
+.aboutImage {
+    width: 25%;
+}
+
+.aboutLabel {
+    text-align: left;
+}
+
+.characters {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 24vh;
+}
+
+.bioContainer {
+    width: 96vh;
+}
+
+.charImage {
+    margin: 0 2vh;
+    transition: box-shadow .4s ease-in-out;
+    border: 1px solid rgba(227, 221, 164, 0.5);
+    width: 96vh;
+    height: 56vh;
+}
+
+.imageGallery {
+    margin: 0 2vh;
+    margin-bottom: 24vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageGrid {
+    display: flex;
+    justify-content: center;
+}
+
+.imageGrid img {
+    width: 50%;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 4vh;
+}
+
+.footerHeader {
+    font-size: 22px;
+}
+
+.footerLabel {
+    font-size: 16px;
+    margin-right: 2vw;
+    margin-bottom: 1.33333vw;
+ }
+
+.gamePlatform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.playstationLogo {
+    height: 6vh;
+    width: 17vh;
+}
+
+.xboxLogo {
+    height: 8vh;
+    width: 10vh;
+}
+
+.steamLogo {
+    height: 6vh;
+    width: 17vh;
+}
+
+.labelContainer {
+    display: flex;
+    align-items: center;
+    margin: 0 1vw;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 1.33333vw;
+}
+
+.esrbLogo {
+    height: 80px;
+    width: 154px;
+    margin-left: 1vw;
+}
+
+.socialMediaContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vw;
+}
+
+.socialMediaLabel {
+    border-right: 1px solid #E3DDA4;
+    margin-right: 1em;
+    padding-right: 1em;
+    font-size: 20px;
+}
+
+.socialMediaIcon {
+    display: flex;
+    width: 3em;
+    height: 5vh;
+    transition: opacity .4s ease-in-out;
+}
+
+.socialMediaIcon:hover {
+    cursor: pointer;
+    opacity: .85;
+}
+
+.banner {
+    margin: 0 2vh;
+    transition: box-shadow .4s ease-in-out;
+    border: 1px solid rgba(227, 221, 164, 0.5);
+}
+
+.banner:hover {
+    box-shadow: 0 0 10px 2px rgba(227, 221, 164, 0.6);
+    cursor: pointer;
+}
+
+.capcomLogo {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 4vh;
+}
+
+.capcom {
+    margin-bottom: 4vh;
+    height: 30px;
 }
